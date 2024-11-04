@@ -3,7 +3,7 @@ import { StudentStateType } from "../slices/studentSlice";
 
 const removeAccountDataTransform = createTransform(
   (inboundState: StudentStateType) => {
-    const { accountData, ...restFormData } = inboundState.formData;
+    const { formData: { accountData, ...restFormData } } = inboundState.formData;
     return {
       ...inboundState,
       formData: {
