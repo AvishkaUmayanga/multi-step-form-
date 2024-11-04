@@ -13,7 +13,6 @@ const CreateAccount = () => {
     register,
     handleSubmit,
     formState: { errors, isSubmitting},
-    reset
   } = useForm<TCreateAccountSchema>({
     resolver: zodResolver(createAccountSchema)
   });
